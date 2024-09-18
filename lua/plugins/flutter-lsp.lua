@@ -1,10 +1,10 @@
+local keymaps = require("lazyvim.plugins.lsp.keymaps")
 local flutter_path = "/Users/joncarlostavarez/fvm"
 local keymap = vim.keymap.set
 return {
   -- for DAP support
   {
     "mfussenegger/nvim-dap",
-
     debugger = {
       enabled = true,
       register_configurations = function()
@@ -23,6 +23,8 @@ return {
       keymap("n", "<leader>LR", ":FlutterLspRestart <CR>", {})
       keymap("n", "<leader>FO", ":FlutterOpen <CR>", {})
       keymap("n", "<leader>FD", ":FlutterDevTools <CR>", {})
+      keymap("n", "<leader>FC", require("telescope").extensions.flutter.commands, { desc = "Open command Flutter" })
+
       require("flutter-tools").setup({
         -- (uncomment below line for windows only)
         -- flutter_path = "home/flutter/bin/flutter.bat",
@@ -53,6 +55,8 @@ return {
             -- require("dap.ext.vscode").load_launchjs()
           end,
         },
+        -- fvm = true,
+        -- root_patterns = { ".git", "pubspec.yaml" },
         dev_log = {
           -- toggle it when you run without DAP
           enabled = true,

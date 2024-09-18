@@ -7,6 +7,7 @@ local keymap = vim.keymap.set
 -- Normal Mode
 keymap("n", "<S-j>", "10j", { desc = "Jump 10 Lines Down" })
 keymap("n", "<S-k>", "10k", { desc = "Jump 10 Lines Up" })
+keymap("n", "<leader>fs", ":w<cr>", { desc = "Save File" })
 
 -- Insert Mode
 keymap("i", "jk", "<ESC>", { desc = "Exit Insert Mode" })
