@@ -30,8 +30,8 @@ return {
       mapping = cmp.mapping.preset.insert({
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-j>"] = cmp.mapping.select_next_item(),
-        ["<C-k>"] = cmp.mapping.select_prev_item(),
+        ["<S-j>"] = cmp.mapping.select_next_item(),
+        ["<S-k>"] = cmp.mapping.select_prev_item(),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<CR>"] = LazyVim.cmp.confirm({ select = auto_select }),
         ["<C-y>"] = LazyVim.cmp.confirm({ select = true }),
